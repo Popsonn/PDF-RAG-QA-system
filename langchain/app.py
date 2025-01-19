@@ -17,10 +17,9 @@ import tempfile
 #os.environ["LANGCHAIN_TRACING_V2"] = "true"
 #langchain_api_key = os.getenv("langchain_api_key")
 
-# loading api
-groq_api_key = st.secrets["GROQ_API_KEY"]
-hugging_face_api_key = st.secrets["hugging_face_api_key"]
-langchain_api_key = st.secrets["langchain_api_key"]
+groq_api_key = st.secrets.secrets.GROQ_API_KEY
+hugging_face_api_key = st.secrets.secrets.hugging_face_api_key
+langchain_api_key = st.secrets.secrets.langchain_api_key
 
 # Initialize session state
 if "qa_chain" not in st.session_state:
